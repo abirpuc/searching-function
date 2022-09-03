@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Functionality</title>
+    <!-- css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <!-- search feild  -->
+        <div class="form-control w-full max-w-xs w-3/4 mx-auto my-4">
+            <label class="label">
+              <span class="label-text">Search your product</span>
+              <span class="label-text-alt">press <kbd class="kbd dbd-sm">Enter</kbd></span>
+            </label>
+            <input id="searchField" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+          </div>
+    </header>
+
+    <main>
+        <section id="not-found" class="container my-4 w-3/4 text-center text-red-700 hidden">
+            <h2 class="text-4xl">product Not Found</h2>
+        </section>
+        <section id="no-product" class="container my-4 w-3/4 text-center text-red-700 hidden">
+            <h2 class="text-4xl">Please Search A Product</h2>
+        </section>
+        <div class="flex ml-4">
+            <!-- menue -->
+            <div class="flex-none">
+                <ul id="all-category" class="menu bg-primary text-secondary-content p-2 rounded-box">
+                    
+                </ul>
+            </div>
+            <!-- products  -->
+            <div id="product-container" class="grow grid grid-cols-4 gap-4">
+                
+            </div>
+          </div>
+        <section>
+                <!-- Put this part before tag -->
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                <div class="modal">
+                <div class="modal-box relative">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                   <div id="modal-body">
+                    
+                   </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
